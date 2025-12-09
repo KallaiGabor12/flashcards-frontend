@@ -18,7 +18,7 @@ const Home = () => {
   }, [])
   return (
     <>
-    {cards.map(card => <FlashCard key={card.id} {...card}/>)}
+    {cards.length > 0 &&<FlashCard key={cards[0].id} {...cards[4]}/>}
     </>
   )
 }
