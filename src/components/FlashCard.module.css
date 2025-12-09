@@ -1,0 +1,76 @@
+.flipCard {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+.flipCardFront, .flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+.flipCardFront {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.flipCardBack {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  header{
+    background: lightgray;
+    padding: 5px;
+  }
+
+  >div{
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 10px;
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1/1;
+        font-size: 2.5rem;
+        border: none;
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+    }
+
+        button:nth-child(1){
+            background-color: var(--green);
+        }
+        button:nth-child(2){
+            background-color: var(--red);
+        }
+    }
+  }
